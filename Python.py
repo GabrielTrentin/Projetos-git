@@ -1,23 +1,15 @@
-frase = "Python"
-print(frase[13:])
-print(frase[1:15])
-print(frase[1:15:2])
+# Crie um programa que leia o nome completo de uma pessoa:
+nome = str(input("Digite seu nome: \n")).strip()
 
-# Imprimindo textos inteiros:
+# O nome com todas as letras maiúsculas
+print("Nome em maiúsculas: {}.".format(nome.upper()))
 
-print(''''
-Ausência
-Eu deixarei que morra em mim o desejo de amar os teus olhos que são doces
-porque nada te poderei dar senão a mágoa de me veres eternamente exausto
-No entanto a tua presença é qualquer coisa como a luz e a vida
-''')
+# O nome com todas minúsculas
+print("Nome em minúsculas: {}.".format(nome.lower()))
 
-print(frase.count("o"))
-print(frase.count("O"))
-print(frase.upper().count("O"))  # Jogou pra caixa alta e contou
-print(len(frase))
-print(len(frase.strip()))
-print(frase.replace("Python", "Android"))
+# Quantas letras ao todo (sem considerar espaços)
+print("Letras ao todo: {}.".format(len(nome) - nome.count(" ")))  # Isso beira a gambiarra
 
-dividido = (frase.split())
-print(dividido[0])
+# Quantas letras tem o primeiro nome:
+nome = nome.split()
+print('O primeiro nome é "{}" e ele tem {} letras.'.format(nome[0], len(nome[0])))
